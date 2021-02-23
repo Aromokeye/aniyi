@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+  --color1: #0b3c5d;
+  --color2: #328cc1;
+  --color3: #d9b310;
+  --color4: #1d2731;
+  --color5: #CCCCCC;
+}
+
+*, ::before, ::after{
+  box-sizing: inherit;
+}
+
+
+html{
+  /* provided by Lera Verou at http://projects.verou.me/css3patterns/#madras */
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color: var(--color4);
+  background-size:16px 16px;
+  position: relative;
+}
+
+
+.app{
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variation-settings: 'INLN' 1000, 'SWRM' 1000;
+  transform: none;
+  box-shadow: -20px 0 15px -8px rgb(0 0 0 /50%);
+  background-color: var(--color1);
+  hyphens:auto;
+  /* text-shadow: var(--color4) 1px 1px 0; */
+}
+#root{
+  width: 100%;
+}
+
+.heading::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: .2rem;
+  margin: 0 auto;
+  background: var(--color5);
+}
+
+
+.hero::after{
+  content: "";
+  display: block;
+  width: 20%;
+  height: .15rem;
+  margin: 1rem 0 0 0;
+  background: var(--color5);
+}
+
+.navline::after{
+  content: "";
+  display:block;
+  width: 100%;
+  height: .2rem;
+  margin: .5rem auto 2rem auto;
+  background: var(--color5);
+}
+a{
+  text-decoration: none;
+  color: var(--color5);
+  user-select: none;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.link{
+  text-decoration: none;
+  color: var(--color5);
+  z-index: 1;
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.link:hover{
+  color: var(--color3);
+}
+.link::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding: 0 2.5rem;
+  height:50%;
+  bottom: -.5rem;
+  background-color: var(--color3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in;
+ 
+}
+.link:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.link i{
+  color: #EEEEEE;
+  font-weight: bolder;
+  margin-right: .2rem;
+}
+.link:hover i{
+  color:var(--color3)
+}
+
+.socials{
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  transform: translateY(-30%);
+}
+.socials::after{
+  content: "";
+  display:flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 100%;
+  left:40%;
+  width: .2rem;
+  height: 40%;
+  background: var(--color5);
+}
+
+.social{
+  color: var(--color5);
+  transform: scale(.9);
+  font-size: 3rem;
+  transition: transform 500ms ease;
+  line-height: 4rem;
+}
+
+.social:hover{
+  color: var(--color3);
+  transform: scale(1);
+}
+aside h1{
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  transform: translateY(-60%);
+  color: var(--color3);
+}
+
+/* media queries  for small devices*/
+@media only screen and (max-width: 425px){
+  .heading::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .1rem;
+    margin: 0 auto;
+    background: var(--color5);
+  }
+  .navline::after{
+    content: "";
+    display:block;
+    width: 100%;
+    height: .1rem;
+    margin: .25rem auto 2rem auto;
+    background: var(--color5);
+  }
+  .socials{
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    transform: translateY(-30%);
+  }
+  .socials::after{
+    content: "";
+    display:flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left:30%;
+    width: .1rem;
+    height: 50%;
+    background: var(--color5);
+  }
+  .social{
+    color: var(--color5);
+    transform: scale(.9);
+    font-size: 1.5rem;
+    transition: transform 500ms ease;
+    line-height: 2rem;
+  }
+  aside h1{
+    position: absolute;
+    top: 40%;
+    left: .5%;
+    transform: translateY(-60%);
+    color: var(--color3);
+  }
+}
