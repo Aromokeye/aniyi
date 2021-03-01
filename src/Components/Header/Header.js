@@ -1,8 +1,12 @@
 import React from 'react'
+import {useHistory} from 'react-router-dom'
 
 const Header = () =>{
+    let history = useHistory()
+    const handleClick=()=> history.push('/')
+    
     return(
-        <div>
+        <div onClick={handleClick} className='pointer o-90'>
             <svg className='w3 h3' viewBox="0 0 105 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="aniyi" clipPath="url(#clip0)">
                 <path id="left" d="M1.18751 63.1813H-0.0312424V-0.112503H58.0375V1.075H1.18751V63.1813Z" fill="#F4F4F4"  />

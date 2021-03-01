@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 :root{
   --color1: #0b3c5d;
@@ -23,21 +24,28 @@ html{
   background-color: var(--color4);
   background-size:16px 16px;
   position: relative;
+  height: 100%;
 }
 
 
 .app{
-  min-height: 100vh;
+  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-variation-settings: 'INLN' 1000, 'SWRM' 1000;
   transform: none;
   box-shadow: -20px 0 15px -8px rgb(0 0 0 /50%);
-  background-color: var(--color1);
+  background-color: var(--color4);
   hyphens:auto;
+  scroll-snap-type: y mandatory;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  overflow-y:auto;
   /* text-shadow: var(--color4) 1px 1px 0; */
 }
+
 #root{
   width: 100%;
 }
@@ -61,6 +69,12 @@ html{
   background: var(--color5);
 }
 
+.navline{
+  position: fixed;
+  bottom: 0;
+
+}
+
 .navline::after{
   content: "";
   display:block;
@@ -72,12 +86,25 @@ html{
 a{
   text-decoration: none;
   color: var(--color5);
+  outline: none;
   user-select: none;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+a:active { 
+  outline: none; 
+}
+a:active, :focus { 
+  outline: none;
+  outline-style: none;
+  -moz-outline-style: none; 
+}
+/* https://stackoverflow.com/questions/814366/how-can-i-remove-the-outline-around-hyperlinks-images */
+a:link:focus, :visited:focus {
+  outline: none;
 }
 .link{
   text-decoration: none;
@@ -122,7 +149,7 @@ a{
 }
 
 .socials{
-  position: absolute;
+  position: fixed;
   top: 70%;
   left: 8%;
   transform: translateY(-30%);
@@ -151,16 +178,49 @@ a{
   color: var(--color3);
   transform: scale(1);
 }
-aside h1{
+
+.mail-line{
+  position: fixed;
+  top: 17%;
+  left: 8%;
+  transform: translateY(-83%);
+}
+.mail-line::before{
+  content: "";
+  display:flex;
   position: absolute;
+  top: -100%;
+  left:50%;
+  width: .2rem;
+  height: 90%;
+  background: var(--color5);
+}
+.mail{  
+  color: var(--color5);
+  font-size: 3rem;
+  transform: scale(.9);
+  transition: transform 500ms ease;
+}
+.mail:hover{
+  color: var(--color3);
+  transform: scale(1);
+}
+
+aside h1{
+  position: fixed;
   top: 40%;
   left: 8%;
   transform: translateY(-60%);
   color: var(--color3);
 }
 
+
+.cancel{
+  color: var(--color3);
+}
+
 /* media queries  for small devices*/
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 450px){
   .heading::before{
     content: "";
     display: block;
@@ -189,7 +249,7 @@ aside h1{
     flex-wrap: wrap;
     position: absolute;
     top: 100%;
-    left:30%;
+    left:35%;
     width: .1rem;
     height: 50%;
     background: var(--color5);
@@ -204,8 +264,63 @@ aside h1{
   aside h1{
     position: absolute;
     top: 40%;
-    left: .5%;
+    left: -1%;
     transform: translateY(-60%);
     color: var(--color3);
+  }
+  
+  .hero::after{
+    content: "";
+    display: block;
+    width: 20%;
+    height: .15rem;
+    margin: .3rem 0 0 0;
+    background: var(--color5);
+  }
+
+  .heading::before{
+    margin: -1.5rem auto;
+  }
+  
+  .navline::after{
+    margin: .5rem auto .5rem auto;
+  }
+
+  .mail{  
+    color: var(--color5);
+    font-size: 1.5rem;
+    transform: scale(.9);
+    transition: transform 500ms ease;
+  }
+  .mail:hover{
+    color: var(--color3);
+    transform: scale(1);
+  }
+
+  .mail-line{
+    position: absolute;
+    top: 17%;
+    left: 2%;
+    transform: translateY(-82%);
+  }
+  .mail-line::before{
+    content: "";
+    display:flex;
+    position: absolute;
+    top: -100%;
+    left:45%;
+    width: .1rem;
+    height: 100%;
+    background: var(--color5);
+  }
+  .link::after{
+    width: 70%;
+  }
+  .navigationbg{
+    background: var(--color4);
+    box-shadow: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ); 
+  }
+  .burger:hover{
+    color: var(--color3)
   }
 }

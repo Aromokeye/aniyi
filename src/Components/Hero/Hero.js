@@ -2,11 +2,11 @@ import React from 'react'
 
 const Hero = () =>{
     return (
-        <div className='flex flex-column ma4-ns ma2 hero'>
+        <div className='flex flex-column justify-center ma4-ns ma3 hero pt6'>
             <span className='f3-ns f4 b lh-copy measure'>
-                Hi, my name is...
+                Hello, my name is...
             </span>
-            <div className='f-subheadline-ns f1-m f2 lh-title fw8 light-gray'>
+            <div className='f-headline-ns f-subheadline-m f2 lh-title fw9 light-gray'>
                 Niyi Aromokeye
             </div>
 
