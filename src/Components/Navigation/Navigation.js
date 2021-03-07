@@ -42,13 +42,14 @@ const clickCancel = () =>{
                 className='mr2-ns mb0-ns pv0-ns pv2 relative'
                 onClick={clickCancel}
                 >
-                    <Link to={`/works`} className='link'><i>2.</i> Works</Link>
+                    <Link to={`/experience`} className='link'><i>2.</i>Experience</Link>
                 </div>
+
                 <div 
                 className='mr2-ns mb0-ns pv0-ns pv2 relative'
                 onClick={clickCancel}
                 >
-                    <Link to={`/read`} className='link'><i>3.</i> Read List</Link>
+                    <Link to={`/works`} className='link'><i>3.</i> Works</Link>
                 </div>
                 <div 
                 className='mr2-ns mb0-ns pv0-ns pv2 relative'

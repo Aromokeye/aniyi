@@ -1,0 +1,112 @@
+.experience{
+    height: calc(100vh);
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding-top: 8.5rem;
+    transform: translate3d(0px, 0px, 0px);
+    z-index:0;
+}
+.title{
+    color: var(--color3);
+    font-family: 'Dancing Script', cursive;
+}
+.employ-menu{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.employ{
+    content: "";
+    display: block;
+    width: 7rem;
+    height: .2rem;
+    padding: .4rem;
+    margin: 1rem auto;
+    background: var(--color5);
+    transform: scale(.7);
+    transition: transform 300ms ease;
+}
+.employ:hover,
+.employ:active{
+    background-color: var(--color3);
+    transform: scale(1);
+}
+.employ-active{
+    content: '';
+    display: block;
+    width: 7rem;
+    height: .2rem;
+    padding: .4rem;
+    margin: 1rem auto;
+    background-color: var(--color3);
+}
+
+
+.employ-details{
+    position: absolute;
+    padding: 1rem;
+    color: #fff;
+    
+}
+.summary::before,
+.summary::after,
+.summary2::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .1rem;
+    margin: 1rem auto;
+    background: var(--color5);
+  }
+
+  @media only screen and (min-device-width : 750px) and (max-device-width : 1024px){
+    .employ-menu{
+        position: absolute;
+        top: 20%;
+        right: 0;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .employ{
+        padding: .2rem;
+    }
+    .employ-active{
+        padding: .2rem;
+    }
+    
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    .employ-menu{
+        position: absolute;
+        top: 22%;
+        right: 0;
+        z-index: 1;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .employ{
+        padding: .2rem;
+        width: 4rem;
+    }
+    .employ-active{
+        padding: .2rem;
+        width: 4rem;
+    }
+    .summary::before,
+    .summary::after,
+    .summary2::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .1rem;
+    margin: .3rem auto;
+    background: var(--color5);
+  }
+  .experience{
+    padding-top: 3rem;
+}
+  }

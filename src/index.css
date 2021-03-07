@@ -195,7 +195,8 @@ a:link:focus, :visited:focus {
   height: 90%;
   background: var(--color5);
 }
-.mail{  
+.mail{ 
+  display: block;
   color: var(--color5);
   font-size: 3rem;
   transform: scale(.9);
@@ -228,6 +229,11 @@ aside h1{
     height: .1rem;
     margin: 0 auto;
     background: var(--color5);
+  }
+  .navline{
+    position: fixed;
+    bottom: .3rem;
+  
   }
   .navline::after{
     content: "";
@@ -287,14 +293,7 @@ aside h1{
   }
 
   .mail{  
-    color: var(--color5);
     font-size: 1.5rem;
-    transform: scale(.9);
-    transition: transform 500ms ease;
-  }
-  .mail:hover{
-    color: var(--color3);
-    transform: scale(1);
   }
 
   .mail-line{
