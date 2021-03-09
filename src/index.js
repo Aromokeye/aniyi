@@ -12,7 +12,6 @@ const rootElement = document.getElementById('root')
 
 if(rootElement.hasChildNodes()){
   ReactDOM.hydrate(
-    ReactDOM.render(
       <React.StrictMode>
         <BrowserRouter>
           <Suspense fallback={<Spinner/>}> 
@@ -21,7 +20,6 @@ if(rootElement.hasChildNodes()){
         </BrowserRouter>
       </React.StrictMode>,
       rootElement
-    )
   )
 }else{
   ReactDOM.render(
