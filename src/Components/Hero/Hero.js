@@ -36,7 +36,7 @@ const Hero = () =>{
                 navigate their <strong className='b light-gray fw6'>information landscape</strong> with ease.
             </p>
             <p className='f6 lh-copy measure-wide dn di-ns'>
-                I believe every user of the web has varying interests or circumtances and so is their information ecologies. 
+                I believe every user of the web has varying interests or circumstances and so is their information ecologies. 
                 I take the pleasure in weaving applications that aid in acquiring, 
                 manipulating and representing information for the user with the appropriate context in mind.
             </p>
