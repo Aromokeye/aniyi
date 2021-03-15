@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Lifenote from '../../Assets/img2.png'
 import Zfactor from '../../Assets/img3.png'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -9,6 +9,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 const Works = () =>{
+
     const variants = {
         visible: {opacity: 1, 
                     x: 0,
@@ -30,7 +31,7 @@ const Works = () =>{
         animate='visible'
         exit='exit'
         >
-            <div className='work flex flex-row-l flex-column relative'>
+            <motion.div className='work flex flex-row-l flex-column relative'>
                 <img src={Lifenote} className='img' alt='lifenote'/>
                 <div className='flex flex-column ml3 work-details'>
                     <h1 className='f-headline-l f1-m fw9 title'>
@@ -38,7 +39,7 @@ const Works = () =>{
                     </h1>
                     <div className='f5-ns f6 measure-wide-ns lh-copy'>
                     Unlike several diary applications in existence which hardly fit into users' 
-                    peculiar use cases, Lifenote helps users create customizable journals 
+                    peculiarities, Lifenote, built on serverless architecture, helps users create customizable journals 
                     with options to share with other selected users who are followers.
                     </div>
                     <a href='https://www.lifenote.space/'
@@ -72,7 +73,7 @@ const Works = () =>{
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* second project */}
             <div className='work flex flex-row-l flex-column relative'>
@@ -85,8 +86,8 @@ const Works = () =>{
                     The compressibility of gases also known as Z-Factor 
                     into their containers such as pipes and reserves are done through
                     thorough experimental measurements in a laboratory. If provided the appropriate values, 
-                    this application makes complex mathematical evaluatiions and provides 
-                    an estimation of the Z-Factor at 99.8 accuracy to laboratory values. 
+                    this application makes complex mathematical evaluations and provides 
+                    an estimation of the Z-Factor at 99.8 accuracy compared to laboratory values. 
                     </div>
                     <a href='https://github.com/Aromokeye/Z-Factor'
                     target="_blank" rel="noreferrer"
@@ -105,7 +106,9 @@ const Works = () =>{
                         <div className='ttu tracked f6 b'>
                            client
                         </div>
-                        <div className='f6 measure lh-copy'>Segun Omobolanle
+                        <div className='f6 measure lh-copy'>
+                            Segun Omobolanle (Petroleum Engineering Researcher, 
+                            University of Ibadan, Nigeria)
                         </div>
                     </div>
                     <div className='flex flex-row justify-between flex-wrap  summary2 w-100'>

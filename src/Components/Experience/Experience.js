@@ -26,7 +26,7 @@ const Experience = () =>{
 
     return (
         <motion.div 
-        className='flex flex-column justify-between relative mh4-ns' 
+        className='flex flex-column justify-between relative mh4-ns ' 
         variants={variants}
         initial='hidden'
         animate='visible'

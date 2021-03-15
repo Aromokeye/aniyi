@@ -32,7 +32,7 @@ const Hero = () =>{
             </div>
 
             <p className='f4 measure-wide lh-copy'>
-                <strong className='b light-gray fw6'>I am</strong> passionate about building softwares that help users 
+                <strong className='b light-gray fw6'>I am</strong> passionate about building software that help users 
                 navigate their <strong className='b light-gray fw6'>information landscape</strong> with ease.
             </p>
             <p className='f6 lh-copy measure-wide dn di-ns'>

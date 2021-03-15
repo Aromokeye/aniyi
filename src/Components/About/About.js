@@ -29,9 +29,9 @@ const About = () =>{
             </h1>
             <div className='flex flex-column measure-wide-l measure f4-m f4-l f6 lh-copy'>
                 <p>
-                    I have had much experience of working on web technologies 
-                    in Educational technology prior to late 2018. I have since evolved into core 
-                    web development, both frontend and backend, using the Javascript language.
+                    I am vastly experienced in Educational technology prior to November, 2018. 
+                    I have since evolved into core web development, 
+                    both frontend and backend, using the Javascript language.
                     <i className='light-gray'> I love it</i>
                 </p>
                 <p className='mt0'>
