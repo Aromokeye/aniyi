@@ -29,10 +29,10 @@ const About = () =>{
             </h1>
             <div className='flex flex-column measure-wide-l measure f4-m f4-l f6 lh-copy'>
                 <p>
-                    I am vastly experienced in Educational technology prior to November, 2018. 
-                    I have since evolved into core web development, 
-                    both frontend and backend, using the Javascript language.
-                    <i className='light-gray'> I love it</i>
+                    I have worked with HTML, CSS and Javascript as an Educational Technologist prior to 
+                    late 2018. I have since evolved into core web development using Javascript/Typescript
+                    with proven tools including React, NodeJS, Electron and Tachyons CSS.
+                    
                 </p>
                 <p className='mt0'>
                     I earned my Bachelors and Masters degrees from University of Education, 
