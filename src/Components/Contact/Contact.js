@@ -33,7 +33,7 @@ const Contact=()=>{
             <div className='flex flex-column  measure f4-m f4-l f6 lh-copy'>
                 <p>
                     I'm currently in search for new oppotunities. Kindly send an email 
-                    or use of one the social links below to reach me and I will respond promptly.
+                    or use one of the social links below to reach me and I will respond promptly.
                 </p>
                 <div className='flex flex-row justify-start'>
                      <a href='mailto:oyekeye@hotmail.com' 
